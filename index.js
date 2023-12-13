@@ -1,3 +1,4 @@
+import { program } from "commander";
 import * as contactsServise from "./contacts.js";
 
 const invokeAction = async ({ action, id, ...data }) => {
@@ -16,6 +17,14 @@ const invokeAction = async ({ action, id, ...data }) => {
     }
 };
 
-// invokeAction({ action: "get", id: "qdggE76Jtbfd9eWJHrssH"});
-// invokeAction({ action: "add", name: "GOOOOOGAAA", email: "goga@gmail.com", phone: "232342343243" });
-invokeAction({action: "remove", id:"P_SLou96oL53E7P80EFUY"})
+program
+    .option("-a, --action <type>")
+    .option("-i, --id <type>")
+    .option("-n, --name <type>")
+    .option("-e, --email <type>")
+    .option("-p, --phone <type>");
+    
+program.parse(process.argv);
+
+const options = program.opts();
+invokeAction(options);
