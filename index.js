@@ -18,4 +18,4 @@ const invokeAction = async ({ action, id, ...data }) => {
 
 // invokeAction({ action: "get", id: "qdggE76Jtbfd9eWJHrssH"});
 // invokeAction({ action: "add", name: "GOOOOOGAAA", email: "goga@gmail.com", phone: "232342343243" });
-invokeAction({action: "remove", id:"inF3lvx5RXy9ovmlijVFy"})
+invokeAction({action: "remove", id:"P_SLou96oL53E7P80EFUY"})
