@@ -4,7 +4,7 @@ import * as contactsServise from "./contacts.js";
 const invokeAction = async ({ action, id, ...data }) => {
     switch(action) { 
         case "list": const allContacts = await contactsServise.listContacts();
-            console.log(allContacts);
+            console.table(allContacts);
             break;
         case "get": const oneContact = await contactsServise.getContactById(id);
             console.log(oneContact);
